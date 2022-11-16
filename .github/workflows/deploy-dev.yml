@@ -55,4 +55,4 @@ jobs:
       - name: Helm install/upgrade chart
         env:
           IMAGE_TAG: ${{ github.sha }}
-        run: helm upgrade devops-training-adonis ./helm/frontend-web/ -f ./helm/frontend-web/values-dev.yaml --install --namespace devops-training-adonis --create-namespace --set app.image_tag=${{ env.IMAGE_TAG }}
+        run: helm upgrade devops-training-adonis ./frontend-web/ -f ./frontend-web/values-dev.yaml --install --namespace devops-training-adonis --create-namespace --set app.image_tag=${{ env.IMAGE_TAG }}
